@@ -1,0 +1,9 @@
+{{ partial "header.html" . }}
+{{ partial "menu.html" . }}
+<h3>From The Blog</h3>
+<ul>
+{{ range where .Pages "Section" "post" }}
+    <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>
+{{ partial "footer.html" . }}

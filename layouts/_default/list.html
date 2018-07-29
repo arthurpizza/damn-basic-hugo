@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+
+<h1>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+</h1>
+
+{{ range where .Pages "Section" "post" }}
+   {{ .Content }}
+{{ end }}
+
+{{ partial "footer.html" . }}
