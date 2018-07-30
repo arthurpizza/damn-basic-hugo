@@ -1,4 +1,8 @@
 {{ partial "header.html" . }}
+{{ partial "menu.html" . }}
+{{ partial "sidebar.html" . }}
+
+<div class="container">
 
 <h1>
     <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -7,5 +11,7 @@
 {{ range where .Pages "Section" "post" }}
    {{ .Content }}
 {{ end }}
+
+</div>
 
 {{ partial "footer.html" . }}
